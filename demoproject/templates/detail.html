@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<img src="{{product.img.url}}" alt= "" style="weight:200px;height:200px;"><br>
+{{product.name}}<br>
+{{product.desc}}<br>
+{{product.price}}<br>
+<a class="btn btn-warning"  href ="{% url 'app:update' product.id %}"> UPDATE </a>
+<a class="btn btn-danger"  href ="{% url 'app:delete' product.id %}"> DELETE </a>
+
+{% endblock %}
